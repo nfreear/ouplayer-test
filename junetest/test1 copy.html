@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><meta charset="utf-8"/><title>*OU player - 1135 / Mental health</title>
+
+<style>
+body{font:1em sans-serif; margin:2em;} abbr{cursor:pointer;}
+.oembed{margin:1em 0; border:1px solid #ccc; border-radius:5px;}
+iframe.my-player{display:block; width:620px; height:410px; overflow:hidden;}
+
+.my-player.audio{width:390px; height:120px;}
+</style>
+
+<h1>OU player tests</h1>
+<!--
+ <h2>1135 / Mental health</h2>
+<p>(Original size: 560 x 340px.)
+-->
+
+
+<p>Theme: OUICE Dark
+<iframe
+ class="my-player" scrolling="0" frameborder="0"
+ src="http://embed.open.ac.uk/embed/pod/1135/734418f016?_theme=ouice-dark">[Difficult to manage..]</iframe>
+
+<p>Theme: OUICE Bold (todo: improve!)
+<iframe
+ class="my-player" scrolling="0" frameborder="0"
+ src="http://embed.open.ac.uk/embed/pod/student-experiences/db6cc60d6b?_theme=ouice-bold">[]</iframe>
+
+
+<p>UNDER DEVELOPMENT!
+<p>Theme: OUICE Dark / audio
+<iframe
+ class="my-player audio" scrolling="0" frameborder="0"
+ src="http://embed.open.ac.uk/embed/pod/l314-spanish/fe481a4d1d?_theme=ouice-dark"
+data-X-src="http://pcie663.open.ac.uk/ouplayer/embed/pod/l314-spanish/fe481a4d1d?_theme=ouice-dark&amp;height=60&amp;poster=0">[Buen Puerto]</iframe>
+
+
+<p><a class="embed" href="http://podcast.open.ac.uk/pod/oubs-web-student-stories/b97d9cef74">I want an MBA<!--http://www8.open.ac.uk/business-school/study/mba--></a>
+
+<p><a class="__embed" href="http://embed.open.ac.uk/embed/pod/a150-10k-b1/23c2514ed6">Nkosi Sikelel' iAfrika (Ladysmith Black Mambazo)</a>
+
+
+<p><a class="embed" href="http://podcast.open.ac.uk/pod/student-experiences#!db6cc60d6b">Student experiences, 1</a>
+
+
+<p><a class="embed" href="http://podcast.open.ac.uk/feeds/1135/20110309T103125_Difficult_to_manage_symptoms.m4v">Difficult to manage</a>
+
+<!--
+<p><a class="embed" href="http://podcast.open.ac.uk/pod/1135/734418f016">Difficult to manage symptoms</a>
+-->
+
+<p><a class="embed" href="http://podcast.open.ac.uk/pod/1135#!15f2d28221">How to support..</a>
+
+<p><a class="embed" href="http://podcast.open.ac.uk/pod/1135/cb8d04e320">Memory, concentration..</a>
+
+<p><a class="embed" href="http://podcast.open.ac.uk/pod/1135/6587f3126c">Recognising barriers</a>
+
+<p><a class="embed" href="http://podcast.open.ac.uk/pod/1135/42b612d044">Social difficulties..</a>
+
+<p><a class="embed" href="http://podcast.open.ac.uk/pod/1135/ee86f9b7fb">What support is available?</a>
+
+
+<h3>OU player</h3>
+Audio - Flash falls back to HTML5.
+<p><a class="embed-audio" href=
+"http://podcast.open.ac.uk/oulearn/languages/spanish/podcast-l314-spanish#!fe481a4d1d">Introduction: A Buerno Puerto, on OU podcast</a>
+
+
+
+
+<p>&copy;2011 The Open University.</p>
+
+<script src=
+"http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="http://embed.open.ac.uk/scripts/jquery.oembed.js"></script>
+
+<!--
+<script src="http://pcie663.open.ac.uk/ouplayer/scripts/jquery.oembed.js"></script>
+-->
+<script type="text/javascript">
+  $(document).ready(function() {
+    // Minimal embed statement.
+    //$("a.embed").oembed();
+
+    // With some options.
+    $("a.x-embed").oembed(null, {
+        embedMethod: 'replace',
+        ouplayer: { maxWidth: 560, maxHeight: 340, _debug:1 }
+    });
+
+	// Audio.
+    $("a.embed-audio").oembed(null, {
+        embedMethod: 'replace',
+        oupodcast: { maxWidth: 400, maxHeight: 60 }
+    });
+  });
+</script>
+
+</html>
