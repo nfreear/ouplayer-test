@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="en"><meta charset=utf-8 /><title>iframe test</title>
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<style>
+body{margin:0; padding:0; background:#ddd;}
+.splash{background:#444;}
+.splash img {display:block; margin:0 auto;}
+
+ul, ul li, menu, menu li{margin:0; padding:0; list-style:none; display:inline;}
+
+menu button{padding:0;}
+menu, .links ul, #controls1, #controls1 li{margin:0;padding:0;}
+menu li, #controls li, .links li{list-style:none; display:inline;}
+abbr{border-bottom:1px dotted gray;}
+
+h3{margin:0; font-weight:normal; font-size:1em;}
+.offscreen, .links abbr{position:absolute; top:-999em;}
+</style>
+
+<script>
+function openpopup(url, name, options, fullscreen) {
+    //var fullurl = "http://localhost/w/moodle" + url;
+    var fr = window.parent.frames[0];
+    //alert(fr.name+': '+fr.outerWidth);
+
+    var params = options ||
+"menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,width=450,height=300,left=600,top=300"; //,dialog=yes,chrome=no
+    var windowobj = window.open(url, name, params);
+    if (!windowobj) {
+        return true;
+    }
+    if (fullscreen) {
+        windowobj.moveTo(0, 0);
+        windowobj.resizeTo(screen.availWidth, screen.availHeight);
+    }
+    windowobj.focus();
+    return false;
+}
+</script>
+
+<div id="ouplayer-1" role="application" style="--height:200px; width:99%; border:1px solid gray">
+
+<div class="splash">
+<img alt="splash screen" src="http://podcast.open.ac.uk/feeds/mst209-fun-of-the-fair/mst209-fun-of-the-fair_00350_std.jpg" />
+</div>
+
+<h3 class="offscreen">Controls (Safari/ IE9 only at present)</h3>
+<ul id="controls1" class="controls initially hide">
+  <li><button class="play" title="Play / Pause">&#x25BA;<!--&#x25B6;--> Play</button></li>
+  <!--li><button class="stop" title="Stop">&#x2587; Stop</button></li-->
+  <!--<li><button class="paus" title="Pause">&#x275A;&#x275A; Pause</button></li>-->
+  <li><button class="rewn" title="Rewind"><!--&#x2590; 'right half block'-->|&#x25C4;<!--&#x2759;&#x25C0;--> Rewind</button></li>
+  <li><button class="loud" title="Louder">&#x25B2; Louder</button></li>
+  <li><button class="quiet" title="Quieter">&#x25BC; Quieter</button></li>
+  <li><input class="volume" size="5" title="Volume" /></li>
+  <li><button class="a"> ...</button></li>
+  <li><input class="time" size="8" title="Duration" /></li>
+</ul>
+
+<a href="transcript1.html" target="new" title="Transcript opens in new window" onclick=
+ "return openpopup(this.href, 'transcript');"
+ >Transcript</a>
+</div>
+
+</html>
