@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><meta charset=utf-8 /><title>*Player mockup 1 - popup transcript / 'Top tips'</title>
+
+<style>
+body{margin:0; padding:0;}
+
+#ouplayer-1{width:717px; height:452px; background:#ccc; border:1px solid gray; font-family:"Arial Unicode MS font",arial,sans-serif; font-size:.8em; border-radius:3px;}
+
+.transcript{height:120px; overflow-y:scroll; border-top:2px solid #999; position:relative; top:-7px; padding-left:2px; background:#eee;}
+.transcript .first{margin-top:2px;}
+
+.btn, .link{width:21px; height:21px; display:inline-block; margin-top:2px; cursor:pointer; border:1px solid #bbb;
+  background-color:#ddd; background-repeat:no-repeat; background-position:center center;}
+.btn:hover, .link:hover{border:1px solid #777; background-color:#bbb;}
+.trans.link {background-image:url(http://www.open.ac.uk/includes/icons/16x16px/016database_8Bit16x16.gif);}
+.pdf.link  {background-image:url(http://www.open.ac.uk/includes/icons/16x16px/06pdf16.gif);}
+.video.link{background-image:url(http://www.open.ac.uk/includes/icons/16x16px/023movie_8Bit16x16.gif);}
+
+.offscreen, .btn span, .link span{position:absolute; top:-999em;}
+
+object{display:block; width:100%; height:425px;}
+</style>
+
+
+<script>
+function openpopup(url, name, options, fullscreen) {
+    //var fullurl = "http://localhost/w/moodle" + url;
+    var fr = window.parent.frames[0];
+    //alert(fr.name+': '+fr.outerWidth);
+
+    var params = options ||
+"menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,width=480,height=340,left=600,top=300"; //,dialog=yes,chrome=no
+    var windowobj = window.open(url, name, params);
+    if (!windowobj) {
+        return true;
+    }
+    if (fullscreen) {
+        windowobj.moveTo(0, 0);
+        windowobj.resizeTo(screen.availWidth, screen.availHeight);
+    }
+    windowobj.focus();
+    return false;
+}
+</script>
+
+<div class="ou-podcast oembed" id="ouplayer-1">
+
+<div class="video">
+
+  <div class="clip player"><object type="application/x-shockwave-flash" data="http://podcast-api.open.ac.uk/play/____yXKaVrKhIfLvrZOEwQ" id="oup-play-obj-1" data-pod-id="oupod:____yXKaVrKhIfLvrZOEwQ" data-width="560" data-height="340">
+    <param name="movie" value="http://podcast-api.open.ac.uk/play/____yXKaVrKhIfLvrZOEwQ">
+    <param value="true" name="allowfullscreen">
+    <param value="high" name="quality">
+    <param value="false" name="cachebusting">
+    <param value="#000000" name="bgcolor">
+  </object>
+
+  <span class="duration" title="Duration">4 minutes 28 seconds</span>
+  <a class="trans link" title="Open transcript in new window" id="oup-trans-btn-1" onclick=
+ "return openpopup(this.href, 'transcript');" href="transcript1.html" target="_blank"><span>Open transcript</span></a>
+  <a class="pdf link" title="PDF transcript *" href="http://podcast.open.ac.uk/feeds/l314-spanish/transcript/l314audio2.pdf"><span>PDF transcript</span></a>
+  <a class="video link" title="Download video *" href="#podcast.open.ac.uk/feeds/new-to-ou-study/20100805T135039_Top_Tips.m4v"><span>Top tips video (M4v, 12.2MB)</span></a>
+  </div>
+</div>
+
+
+</div>
+</html>
